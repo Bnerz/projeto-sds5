@@ -1,5 +1,6 @@
-{
+{//Aqui vicam orientações de como a compilção do typescript vai acontecer.
   "compilerOptions": {
+    "baseUrl": "./src",
     "target": "es5",
     "lib": [
       "dom",
