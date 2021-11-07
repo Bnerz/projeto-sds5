@@ -10,11 +10,12 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-@Entity //Anotation JPA
+@Entity
 @Table(name = "tb_sellers")
 public class Seller {
 	
-	@Id 
+	
+	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
@@ -23,11 +24,9 @@ public class Seller {
 	private List<Sale> sales = new ArrayList<>();
 	
 	public Seller() {
-		
-	}
+}
 
 	public Seller(Long id, String name) {
-		super();
 		this.id = id;
 		this.name = name;
 	}
@@ -51,8 +50,7 @@ public class Seller {
 	public List<Sale> getSales() {
 		return sales;
 	}
-	
-	
-	
-
 }
+
+
+
