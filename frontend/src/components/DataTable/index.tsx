@@ -19,7 +19,7 @@ const DataTable = () => {
     });
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/sales?page=${activePage}0&size20&sort=date,desc`)
+        axios.get(`${BASE_URL}/sales?page=${activePage}&size20&sort=date,desc`)
             .then(response => {
                 setPage(response.data);
             })
@@ -33,7 +33,7 @@ const DataTable = () => {
 
     return (
         <>
-        <Pagination page={page} onPageChange={changePage}/>
+        <Pagination page={page} onPageChange={changePage} />
             <div className="table-responsive">
                 <table className="table table-striped table-sm">
                     <thead>
